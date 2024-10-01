@@ -100,11 +100,12 @@ const onRemove=(ele)=>{
 
             snackbar("this stdInfo remove is successfully!","success");
 
-            // onMessage();
+            
             
            
         }
-
+           
+        onMessage();
         localStorage.setItem("stdArr",JSON.stringify(stdArr));
       });
 
