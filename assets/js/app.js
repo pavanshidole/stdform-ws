@@ -101,7 +101,7 @@ const onRemove=(ele)=>{
             snackbar("this stdInfo remove is successfully!","success");
 
             
-            
+            // onMessage();  //work on both outside an inside
            
         }
            
@@ -266,12 +266,8 @@ updateBtn.addEventListener("click", onUpdateBtn);
 
 
 
-cl(x);
-
-var x=10;
 
 
-cl(y);
 
-var y;
+
 
