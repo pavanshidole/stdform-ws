@@ -1,0 +1,19 @@
+:root{
+    --color-pri: #2c3345;
+    --color-text:#fff;
+}
+
+
+.card{
+    background-color: var(--color-pri);
+    color: var(--color-text);
+}
+
+.table{
+    color: var(--color-text);
+}
+
+
+.editBtn, .removeBtn{
+    cursor: pointer;
+}
