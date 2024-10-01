@@ -35,14 +35,29 @@ const snackbar=(title,icon)=>{
 
 
 let stdArr=[
-    {
-        fname:"pavan",
-        lname:"shidole",
-        email:"ps@gmail.com",
-        contact:123456789,
-        stdId:"120",
-    }
+    // {
+    //     fname:"pavan",
+    //     lname:"shidole",
+    //     email:"ps@gmail.com",
+    //     contact:123456789,
+    //     stdId:"120",
+    // }
 ]
+
+
+const onMessage=()=>{
+    if(stdArr.length ===0){
+        info.classList.remove("d-none");
+        card.classList.add("d-none");
+    }else{
+        info.classList.add("d-none");
+        card.classList.remove("d-none");
+    }
+
+ 
+}
+
+onMessage();
 
 
 const onEdit=(ele)=>{
@@ -85,7 +100,7 @@ const onRemove=(ele)=>{
 
             snackbar("this stdInfo remove is successfully!","success");
 
-            onMessage();
+            // onMessage();
             
            
         }
@@ -98,17 +113,17 @@ const onRemove=(ele)=>{
     cl(stdArr);
 }
 
-const onMessage=()=>{
-    if(stdArr.length ===0){
-        info.classList.remove("d-none");
-        card.classList.add("d-none");
-    }else{
-        info.classList.add("d-none");
-        card.classList.remove("d-none");
-    }
-}
+// const onMessage=()=>{
+//     if(stdArr.length ===0){
+//         info.classList.remove("d-none");
+//         card.classList.add("d-none");
+//     }else{
+//         info.classList.add("d-none");
+//         card.classList.remove("d-none");
+//     }
+// }
 
-onMessage();
+// onMessage();
 
 
 const tempArr=(arr)=>{
@@ -129,7 +144,7 @@ const tempArr=(arr)=>{
 
     console.log(result);
 
-    onMessage();
+    // onMessage();
 }
 
 if(localStorage.getItem("stdArr")){
@@ -186,9 +201,9 @@ const onStdForm=(ele)=>{
 
     snackbar("this " + stdObj.fname + " " +  stdObj.lname + " is added is successfully!", "success");
 
+    onMessage();
     
-
-    // ele.target.reset();
+    ele.target.reset();
     
     
 }
@@ -227,10 +242,15 @@ const onUpdateBtn=()=>{
    stdForm.reset();
     
 
+   AddBtn.classList.remove("d-none");
+   updateBtn.classList.add("d-none");
+
    snackbar(`this  ${updateObj.fname} stdInfo update is successfully!!`, `success`);
    
     
 }
+
+
 
 
 
@@ -245,5 +265,12 @@ updateBtn.addEventListener("click", onUpdateBtn);
 
 
 
+cl(x);
 
+var x=10;
+
+
+cl(y);
+
+var y;
 
