@@ -128,6 +128,8 @@ const tempArr=(arr)=>{
     stdContainer.innerHTML=result;
 
     console.log(result);
+
+    onMessage();
 }
 
 if(localStorage.getItem("stdArr")){
@@ -184,7 +186,7 @@ const onStdForm=(ele)=>{
 
     snackbar("this " + stdObj.fname + " " +  stdObj.lname + " is added is successfully!", "success");
 
-    onMessage();
+    
 
     // ele.target.reset();
     
