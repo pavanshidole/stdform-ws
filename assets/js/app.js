@@ -183,6 +183,10 @@ const onStdForm=(ele)=>{
     localStorage.setItem("stdArr",JSON.stringify(stdArr));
 
     snackbar("this " + stdObj.fname + " " +  stdObj.lname + " is added is successfully!", "success");
+
+    onMessage();
+
+    ele.target.reset();
     
     
 }
