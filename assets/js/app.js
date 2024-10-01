@@ -186,7 +186,7 @@ const onStdForm=(ele)=>{
 
     onMessage();
 
-    ele.target.reset();
+    // ele.target.reset();
     
     
 }
