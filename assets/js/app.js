@@ -84,6 +84,8 @@ const onRemove=(ele)=>{
             ele.closest("tr").remove();
 
             snackbar("this stdInfo remove is successfully!","success");
+
+            onMessage();
             
            
         }
